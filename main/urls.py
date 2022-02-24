@@ -19,7 +19,7 @@ from django.urls import path
 from Backend.Views import MainView
 from Backend.Views.ChoiceView import ChoiceList, ChoiceDetail
 from Backend.Views.ExampleView import ExampleList, ExampleDetail
-<<<<<<< HEAD
+from Backend.Views.PollView import PollDetail, PollList
 from Backend.Views.VoteView import VoteList, VoteDetail
 
 urlpatterns = [
@@ -28,16 +28,8 @@ urlpatterns = [
     path('choices/<int:pk>', ChoiceDetail.as_view()),
     path('votes/', VoteList.as_view()),
     path('vote/<int:pk>', VoteDetail.as_view()),
-    path('',MainView)
-
-=======
-from Backend.Views.PollView import PollList, PollDetail
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
     path('examples/', ExampleList.as_view()),
     path('example/<int:pk>', ExampleDetail.as_view()),
     path('polls/', PollList.as_view()),
     path('poll/<int:pk>', PollDetail.as_view()),
->>>>>>> master
-]
+    path('',MainView)

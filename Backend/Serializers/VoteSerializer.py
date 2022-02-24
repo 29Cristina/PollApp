@@ -1,11 +1,9 @@
 from rest_framework import serializers
 
-from ..models import ChoiceModel
-from ..models.ExampleModel import ExampleModel
-from ..models.VoteModel import Vote
+from ..models.VoteModel import VoteModel
 
 
 class VoteSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Vote
+        model = VoteModel
         fields = "__all__"
