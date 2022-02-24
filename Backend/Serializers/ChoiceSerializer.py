@@ -1,7 +1,8 @@
 from rest_framework import serializers
+from ..models import ChoiceModel
 from ..models.ExampleModel import ExampleModel
 
-class ExampleSerializer(serializers.ModelSerializer):
+class ChoiceSerializer(serializers.ModelSerializer):
     class Meta:
-        model = ExampleModel
+        model = ChoiceModel
         fields = "__all__"
