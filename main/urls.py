@@ -16,6 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from Backend.Views.ExampleView import ExampleList, ExampleDetail
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('examples/', ExampleList.as_view()),
+    path('example/<int:pk>', ExampleDetail.as_view())
+
 ]
