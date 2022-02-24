@@ -3,7 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 from rest_framework import generics
 
-from Backend.Models.ExampleModel import ExampleModel
+from Backend.models.ExampleModel import ExampleModel
 from Backend.Serializers.ExampleSerializer import ExampleSerializer
 
 

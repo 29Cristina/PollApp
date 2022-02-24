@@ -17,10 +17,12 @@ from django.contrib import admin
 from django.urls import path
 
 from Backend.Views.ExampleView import ExampleList, ExampleDetail
+from Backend.Views.PollView import PollList, PollDetail
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('examples/', ExampleList.as_view()),
-    path('example/<int:pk>', ExampleDetail.as_view())
-
+    path('example/<int:pk>', ExampleDetail.as_view()),
+    path('polls/', PollList.as_view()),
+    path('poll/<int:pk>', PollDetail.as_view()),
 ]
