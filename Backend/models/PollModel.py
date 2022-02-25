@@ -7,7 +7,5 @@ from django.db import models
 class PollModel(models.Model):
     question = models.CharField(max_length=32)
     creator = models.ForeignKey(User, on_delete=models.CASCADE)
-
-
-def __str__(self):
-    return self.question
+    def __str__(self):
+        return self.question
