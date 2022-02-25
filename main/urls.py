@@ -13,8 +13,11 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from xml.etree.ElementInclude import include
+
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
 from Backend.Views.MainView import MainView
 from Backend.Views.ChoiceView import ChoiceList, ChoiceDetail
@@ -32,5 +35,14 @@ urlpatterns = [
     path('example/<int:pk>', ExampleDetail.as_view()),
     path('polls/', PollList.as_view()),
     path('poll/<int:pk>', PollDetail.as_view()),
-    path('', MainView),
+    path("api-auth/", include("rest_framework.urls", namespace="rest_framework")),
+    path("schema/", SpectacularAPIView.as_view(), name="schema"),
+    path(
+        #"docs/",
+        "",
+        SpectacularSwaggerView.as_view(
+            template_name="swagger-ui.html", url_name="schema"
+        ),
+        name="swagger-ui",
+    ),
 ]
