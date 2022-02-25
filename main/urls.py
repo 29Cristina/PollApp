@@ -26,15 +26,15 @@ from Backend.Views.PollView import PollDetail, PollList
 from Backend.Views.VoteView import VoteList, VoteDetail
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('choices/', ChoiceList.as_view()),
-    path('choices/<int:pk>', ChoiceDetail.as_view()),
-    path('votes/', VoteList.as_view()),
-    path('vote/<int:pk>', VoteDetail.as_view()),
-    path('examples/', ExampleList.as_view()),
-    path('example/<int:pk>', ExampleDetail.as_view()),
-    path('polls/', PollList.as_view()),
-    path('poll/<int:pk>', PollDetail.as_view()),
+    path('admin/', admin.site.urls, name="admin"),
+    path('choices/', ChoiceList.as_view(), name="choice_list"),
+    path('choices/<int:pk>', ChoiceDetail.as_view(), name="choice_individual"),
+    path('votes/', VoteList.as_view(), name="vote_list"),
+    path('votes/<int:pk>', VoteDetail.as_view(), name="vote_individual"),
+    path('examples/', ExampleList.as_view(), name="example_list"),
+    path('examples/<int:pk>', ExampleDetail.as_view(), name="example_individual"),
+    path('polls/', PollList.as_view(), name="poll_list"),
+    path('polls/<int:pk>', PollDetail.as_view(), name="poll_individual"),
     path("api-auth/", include("rest_framework.urls", namespace="rest_framework")),
     path("schema/", SpectacularAPIView.as_view(), name="schema"),
     path(
