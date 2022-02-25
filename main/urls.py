@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from Backend.Views import MainView
+from Backend.Views.MainView import MainView
 from Backend.Views.ChoiceView import ChoiceList, ChoiceDetail
 from Backend.Views.ExampleView import ExampleList, ExampleDetail
 from Backend.Views.PollView import PollDetail, PollList
@@ -32,4 +32,5 @@ urlpatterns = [
     path('example/<int:pk>', ExampleDetail.as_view()),
     path('polls/', PollList.as_view()),
     path('poll/<int:pk>', PollDetail.as_view()),
-    path('',MainView)
+    path('', MainView),
+]
