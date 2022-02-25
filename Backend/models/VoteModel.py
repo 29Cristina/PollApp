@@ -5,8 +5,8 @@ from Backend.models.ChoiceModel import ChoiceModel
 
 
 class VoteModel(models.Model):
-    choice = models.ForeignKey(ChoiceModel, related_name="choice", on_delete=models.CASCADE())
-    voter = models.ForeignKey(User, related_name="voter", on_delete=models.CASCADE())
+    choice = models.ForeignKey(ChoiceModel, on_delete=models.CASCADE)
+    voter = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __init__(self):
         return self.id

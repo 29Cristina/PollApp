@@ -8,8 +8,8 @@ class PollSerializer(serializers.ModelSerializer):
         model = PollModel
         fields = "__all__"
 
-    creator = serializers.SlugRelatedField(
-        many = False,
-        read_only = True,
-        slug_field = "username"
-    )
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        representation['creator'] = instance.creator.username
+
+        return representation
