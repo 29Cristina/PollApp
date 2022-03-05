@@ -13,14 +13,15 @@ from Backend.models.VoteModel import VoteModel
 client = Client()
 class GetSingleVoteTest(TestCase):
     """ Test module for GET Votes"""
-    def setup(self):
+    def setUp(self):
         self.user=User.objects.create_user(username='Dorian', password='Hatz')
-        self.vote = VoteModel.objects.create(
-            question='Hatz?', creator=self.user)
-        self.vote.save
+        self.poll = PollModel.objects.create(question= "Hello?", creator=self.user)
+        self.choice = ChoiceModel.objects.create(text= "Hi", poll=self.poll)
+        self.vote = VoteModel.objects.create(choice=self.choice, voter=self.user)
+
     def test_get_valid_single_vote(self):
         response = client.get(
-            reverse('get_delete_update_vote', kwargs={'pk': self.vote.pk}))
+            reverse('vote_individual', kwargs={'pk': self.vote.pk}))
         votes = VoteModel.objects.get(pk=self.vote.pk)
         serializer = VoteSerializer(votes)
         self.assertEqual(response.data, serializer.data)
@@ -28,7 +29,7 @@ class GetSingleVoteTest(TestCase):
 
     def test_get_invalid_single_vote(self):
         response = client.get(
-            reverse('get_delete_update_votes', kwargs={'pk': 30}))
+            reverse('vote_individual', kwargs={'pk': 30}))
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
 
 
