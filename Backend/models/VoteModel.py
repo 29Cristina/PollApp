@@ -8,5 +8,5 @@ class VoteModel(models.Model):
     choice = models.ForeignKey(ChoiceModel, on_delete=models.CASCADE)
     voter = models.ForeignKey(User, on_delete=models.CASCADE)
 
-    def __init__(self):
+    def __str__(self):
         return self.id
