@@ -37,12 +37,12 @@ urlpatterns = [
     path('polls/<int:pk>', PollDetail.as_view(), name="poll_individual"),
     path("api-auth/", include("rest_framework.urls", namespace="rest_framework")),
     path("schema/", SpectacularAPIView.as_view(), name="schema"),
-    # path(
-    #     #"docs/",
-    #     "",
-    #     SpectacularSwaggerView.as_view(
-    #         template_name="swagger-ui.html", url_name="schema"
-    #     ),
-    #     name="swagger-ui",
-    # ),
+    path(
+        #"docs/",
+        "",
+        SpectacularSwaggerView.as_view(
+            template_name="swagger-ui.html", url_name="schema"
+        ),
+        name="swagger-ui",
+    ),
 ]
