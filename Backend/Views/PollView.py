@@ -1,14 +1,12 @@
-from django.shortcuts import render
-
 # Create your views here.
-from rest_framework import generics, status
+from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from Backend.models.ExampleModel import ExampleModel
 from Backend.models.PollModel import PollModel
-from Backend.Serializers.ExampleSerializer import ExampleSerializer
 from Backend.Serializers.PollSerializer import PollSerializer
+from Backend.permissions.DeleteIfOwnerOrStaffPermission import DeleteIfOwnerOrStaffPermission
+
 
 class PollList(APIView):
     def get(self, request, format=None):
@@ -25,6 +23,8 @@ class PollList(APIView):
 
 
 class PollDetail(APIView):
+    permission_classes = [DeleteIfOwnerOrStaffPermission]
+
     def get(self, request, pk, format=None):
         poll = self.get_object(pk)
         serializer = PollSerializer(poll)
