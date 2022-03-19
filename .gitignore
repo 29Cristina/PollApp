@@ -1,7 +1,7 @@
 # Default ignored files
 /shelf/
 /workspace.xml
-# Editor-based HTTP Client requests
+# Editor-based HTTP Client request=s
 /httpRequests/
 # Datasource local storage ignored files
 /dataSources/
@@ -9,4 +9,4 @@
 
 db.sqlite3
 .venv
-**/*__pycache__/
+__pycache__
