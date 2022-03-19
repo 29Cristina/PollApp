@@ -1,6 +1,8 @@
 # Default ignored files
 /shelf/
-/workspace.xml
+misc.xml
+workspace.xml
+PollApp.iml
 # Editor-based HTTP Client request=s
 /httpRequests/
 # Datasource local storage ignored files
