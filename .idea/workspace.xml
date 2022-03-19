@@ -5,6 +5,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/PollApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PollApp.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/Backend/tests/TestPolls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/tests/TestPolls.py" afterDir="false" />
+=======
       <change beforePath="$PROJECT_DIR$/Backend/Serializers/ChoiceSerializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Serializers/ChoiceSerializer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/Serializers/ExampleSerializer.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/Views/ExampleView.py" beforeDir="false" />
@@ -12,6 +15,7 @@
       <change beforePath="$PROJECT_DIR$/Backend/models/ExampleModel.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/tests/TestExamples.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/urls.py" afterDir="false" />
+>>>>>>> master
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,8 +147,12 @@
       <workItem from="1647025377158" duration="1355000" />
       <workItem from="1647108825698" duration="302000" />
       <workItem from="1647379922989" duration="3000" />
+<<<<<<< HEAD
+      <workItem from="1647681920877" duration="6849000" />
+=======
       <workItem from="1647681920877" duration="4062000" />
       <workItem from="1647693737175" duration="78000" />
+>>>>>>> master
     </task>
     <servers />
   </component>
