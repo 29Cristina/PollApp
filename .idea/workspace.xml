@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a9b41c74-2b29-4496-bf22-ccde1594d3b6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/settings.py" afterDir="false" />
+    <list default="true" id="c33c16f0-5212-4e0e-a7d4-22c0d8cbf923" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Views/PollView.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Views/PollView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Views/VoteView.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Views/VoteView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/tests/TestPolls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/tests/TestPolls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,15 +16,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/.gitignore" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Backend/Views/ChoiceView.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Backend/Views/MainView.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Backend/Views/PollView.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Backend/Serializers/ChoiceSerializer.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Backend/Views/ExampleView.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/main/urls.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.venv/Lib/site-packages/rest_framework/generics.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Backend/Views/PollView.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Backend/Views/MainView.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.gitignore" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Backend/Views/ChoiceView.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Backend/tests/TestMain.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/main/urls.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="25byjeLG3EgsT9P2w8OLhuISsIa" />
   <component name="ProjectViewState">
@@ -115,7 +120,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a9b41c74-2b29-4496-bf22-ccde1594d3b6" name="Changes" comment="" />
+      <changelist id="c33c16f0-5212-4e0e-a7d4-22c0d8cbf923" name="Changes" comment="" />
       <created>1645810220244</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -131,8 +136,14 @@
       <workItem from="1647023210805" duration="381000" />
       <workItem from="1647023730469" duration="1589000" />
       <workItem from="1647025377158" duration="1355000" />
+      <workItem from="1647108825698" duration="302000" />
+      <workItem from="1647379922989" duration="3000" />
+      <workItem from="1647681920877" duration="4062000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -144,7 +155,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PollApp$Test__Backend_tests_TestPolls_TestPostPoll_test_create_poll.coverage" NAME="Test: Backend.tests.TestPolls.TestPostPoll.test_create_poll Coverage Results" MODIFIED="1645817769550" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />

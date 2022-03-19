@@ -1,47 +1,16 @@
 # Create your views here.
-from rest_framework import status
-from rest_framework.response import Response
-from rest_framework.views import APIView
+from rest_framework import generics, viewsets, permissions
+
 
 from Backend.models.PollModel import PollModel
 from Backend.Serializers.PollSerializer import PollSerializer
 from Backend.permissions.DeleteIfOwnerOrStaffPermission import DeleteIfOwnerOrStaffPermission
 
 
-class PollList(APIView):
-    def get(self, request, format=None):
-        polls = PollModel.objects.all()
-        serializer = PollSerializer(polls, many=True)
-        return Response(serializer.data)
+class PollList(generics.ListCreateAPIView):
+    queryset = PollModel.objects.all()
+    serializer_class = PollSerializer
 
-    def post(self, request, format=None):
-        serializer = PollSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
-class PollDetail(APIView):
-    permission_classes = [DeleteIfOwnerOrStaffPermission]
-
-    def get(self, request, pk, format=None):
-        poll = self.get_object(pk)
-        serializer = PollSerializer(poll)
-        return Response(serializer.data)
-
-    def put(self, request, pk, format=None):
-        poll = self.get_object(pk)
-        serializer = PollSerializer(poll, data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-    def delete(self, request, pk, format=None):
-        poll = self.get_object(pk)
-        poll.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
-
-    def get_object(self, pk):
-        pass
+class PollDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = PollModel.objects.all()
+    serializer_class = PollSerializer
