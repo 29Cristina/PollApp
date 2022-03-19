@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c33c16f0-5212-4e0e-a7d4-22c0d8cbf923" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/PollApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PollApp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Views/PollView.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Views/PollView.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Views/VoteView.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Views/VoteView.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/tests/TestPolls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/tests/TestPolls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Serializers/ChoiceSerializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Serializers/ChoiceSerializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Serializers/ExampleSerializer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Views/ExampleView.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/models/ExampleModel.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/tests/TestExamples.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,15 +22,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Backend/Serializers/ChoiceSerializer.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Backend/Views/ExampleView.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/.venv/Lib/site-packages/rest_framework/generics.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Backend/Views/PollView.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Backend/Views/MainView.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.gitignore" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Backend/Views/ChoiceView.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Backend/tests/TestMain.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Backend/Views/MainView.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Backend/Serializers/ChoiceSerializer.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Backend/Views/PollView.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/main/urls.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.venv/Lib/site-packages/rest_framework/generics.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Backend/tests/TestMain.py" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -139,6 +144,7 @@
       <workItem from="1647108825698" duration="302000" />
       <workItem from="1647379922989" duration="3000" />
       <workItem from="1647681920877" duration="4062000" />
+      <workItem from="1647693737175" duration="78000" />
     </task>
     <servers />
   </component>
@@ -155,6 +161,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PollApp$Test__Backend_tests_TestPolls_TestPostPoll_test_create_poll.coverage" NAME="Test: Backend.tests.TestPolls.TestPostPoll.test_create_poll Coverage Results" MODIFIED="1645817769550" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
