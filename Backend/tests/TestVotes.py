@@ -39,11 +39,23 @@ class CreateVote(APITestCase):
         cls.poll = PollModel.objects.create(question="Ocult?", creator=cls.user)
         cls.choice = ChoiceModel.objects.create(text="Azteca nu a dat banii", poll=cls.poll)
 
-    def test_create_vote(self):
+    def test_create_vote_authorized(self):
+        data = {
+            'choice': self.choice.pk,
+            'voter': self.user.pk
+        }
+        self.client.force_authenticate(user=self.user)
+        url = reverse('vote_list')
+        response = self.client.post(url, data, format="json")
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        client.logout()
+
+    def test_create_vote_unauthorized(self):
         data = {
             'choice': self.choice.pk,
             'voter': self.user.pk
         }
         url = reverse('vote_list')
         response = self.client.post(url, data, format="json")
-        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        self.assertEqual(response.status_code,  status.HTTP_401_UNAUTHORIZED)
+
