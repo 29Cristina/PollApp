@@ -14,3 +14,4 @@ class PollList(generics.ListCreateAPIView):
 class PollDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = PollModel.objects.all()
     serializer_class = PollSerializer
+    permission_classes = [DeleteIfOwnerOrStaffPermission]
