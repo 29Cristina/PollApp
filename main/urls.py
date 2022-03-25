@@ -24,10 +24,13 @@ from Backend.Views.ChoiceView import ChoiceList, ChoiceDetail
 from Backend.Views.PollView import PollDetail, PollList
 from Backend.Views.VoteView import VoteList, VoteDetail
 
+from Backend.Views.ChoiceView import getChoices
+
 urlpatterns = [
     path('admin/', admin.site.urls, name="admin"),
     path('choices/', ChoiceList.as_view(), name="choice_list"),
     path('choices/<int:pk>', ChoiceDetail.as_view(), name="choice_individual"),
+    path('choices/poll/<int:pk>',getChoices ,name="choices_from_poll"),
     path('votes/', VoteList.as_view(), name="vote_list"),
     path('votes/<int:pk>', VoteDetail.as_view(), name="vote_individual"),
     path('polls/', PollList.as_view(), name="poll_list"),
