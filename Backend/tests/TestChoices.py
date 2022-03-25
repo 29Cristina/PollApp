@@ -35,6 +35,20 @@ class GetChoiceIndividual(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
 
+class GetChoicesFromPoll(APITestCase):
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        cls.test_user = User.objects.create_user(username='testu', password='test')
+        cls.poll = PollModel.objects.create(question='Intrebare', creator=cls.test_user)
+        cls.choice = ChoiceModel.objects.create(text="Test Name", poll=cls.poll)
+
+    def test_get_choices_from_poll(self):
+        url = reverse('choices_from_poll', kwargs={'pk': self.choice.pk})
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+
 class CreateChoice(APITestCase):
     """ Test module for inserting a new choice (POST) being authenticated or not"""
 
@@ -67,4 +81,3 @@ class CreateChoice(APITestCase):
         url = reverse('choice_list')
         response = self.client.post(url, data, format="json")
         self.assertEqual(response.status_code, status.HTTP_401_UNAUTHORIZED)
-
