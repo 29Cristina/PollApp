@@ -24,6 +24,8 @@ from Backend.Views.ChoiceView import ChoiceList, ChoiceDetail
 from Backend.Views.PollView import PollDetail, PollList
 from Backend.Views.VoteView import VoteList, VoteDetail
 
+from Backend.Views.RegisterView import RegisterView
+
 urlpatterns = [
     path('admin/', admin.site.urls, name="admin"),
     path('choices/', ChoiceList.as_view(), name="choice_list"),
@@ -33,6 +35,7 @@ urlpatterns = [
     path('polls/', PollList.as_view(), name="poll_list"),
     path('polls/<int:pk>', PollDetail.as_view(), name="poll_individual"),
     path("api-auth/", include("rest_framework.urls", namespace="rest_framework")),
+    path('register/', RegisterView.as_view(), name='auth_register'),
     path("schema/", SpectacularAPIView.as_view(), name="schema"),
     path(
         #"docs/",
@@ -42,4 +45,5 @@ urlpatterns = [
         ),
         name="swagger-ui",
     ),
+
 ]
