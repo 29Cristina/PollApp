@@ -24,7 +24,7 @@ class GetTestIndividual(APITestCase):
         cls.user=User.objects.create_user(username="Ian",password='1234')
         cls.poll=PollModel.objects.create(question="Ocult?",creator=cls.user)
         cls.choice = ChoiceModel.objects.create(text="Azteca nu a dat banii", poll=cls.poll)
-        cls.vote=VoteModel.objects.create(choice=cls.choice, voter=cls.user)
+        cls.vote=VoteModel.objects.create(choice=cls.choice, voter=cls.user, poll=cls.poll)
     def test_get_vote_individual(self):
         url = reverse('vote_individual', kwargs={'pk': self.vote.pk})
         response = self.client.get(url)
@@ -42,7 +42,8 @@ class CreateVote(APITestCase):
     def test_create_vote_authorized(self):
         data = {
             'choice': self.choice.pk,
-            'voter': self.user.pk
+            'voter': self.user.pk,
+            'poll': self.poll.pk
         }
         self.client.force_authenticate(user=self.user)
         url = reverse('vote_list')
@@ -53,7 +54,8 @@ class CreateVote(APITestCase):
     def test_create_vote_unauthorized(self):
         data = {
             'choice': self.choice.pk,
-            'voter': self.user.pk
+            'voter': self.user.pk,
+            'poll': self.poll.pk
         }
         url = reverse('vote_list')
         response = self.client.post(url, data, format="json")
