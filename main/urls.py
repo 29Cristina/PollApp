@@ -19,7 +19,7 @@ from django.contrib import admin
 from django.urls import path, include
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
-from Backend.Views.MainView import MainView
+from Backend.Views.LoginView import LoginView
 from Backend.Views.ChoiceView import ChoiceList, ChoiceDetail
 from Backend.Views.PollView import PollDetail, PollList
 from Backend.Views.VoteView import VoteList, VoteDetail
@@ -37,6 +37,7 @@ urlpatterns = [
     path('polls/<int:pk>', PollDetail.as_view(), name="poll_individual"),
     path("api-auth/", include("rest_framework.urls", namespace="rest_framework")),
     path('register/', RegisterView.as_view(), name='auth_register'),
+    path('login/', LoginView.as_view(), name="auth_login"),
     path("schema/", SpectacularAPIView.as_view(), name="schema"),
     path(
         #"docs/",
