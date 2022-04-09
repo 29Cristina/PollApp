@@ -13,7 +13,6 @@ class ChoiceList(generics.ListCreateAPIView):
     queryset = ChoiceModel.objects.all()
     serializer_class = ChoiceSerializer
 
-
 class ChoiceDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = ChoiceModel.objects.all()
     serializer_class = ChoiceSerializer

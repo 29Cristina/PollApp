@@ -2,6 +2,7 @@ from django.contrib.auth.models import Group
 from django.shortcuts import render
 
 # Create your views here.
+from drf_spectacular.utils import extend_schema
 from rest_framework import generics, viewsets, permissions, status
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -16,6 +17,9 @@ class VoteList(APIView):
         votes = VoteModel.objects.all()
         serializer = VoteSerializer(votes, many=True)
         return Response(serializer.data)
+    @extend_schema(
+        request=VoteSerializer,
+    )
     def post(self, request, format=None):
         serializer=VoteSerializer(data=request.data)
         if serializer.is_valid() and not VoteModel.objects.filter(voter=request.user, poll=request.data["poll"]).exists() and ChoiceModel.objects.filter(pk=request.data["choice"], poll=request.data["poll"]).exists():

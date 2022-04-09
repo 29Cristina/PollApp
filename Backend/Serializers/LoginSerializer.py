@@ -21,7 +21,7 @@ class LoginSerializer(serializers.Serializer):
     def validate(self, attrs):
         user = authenticate(username=attrs['username'], password=attrs['password'])
         if user is None:
-            raise serializers.ValidationError({"username": "Login error."})
+            raise serializers.ValidationError({"username": "Wrong username or password."})
         attrs['user'] = user
         return attrs
 
